@@ -8,9 +8,9 @@ const Hero = () => {
         className="flex flex-col items-center gap-6 py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white"
         >
         {/* Trust Badge */}
-        <div className="inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full">
-            <p className="text-xs font-medium">
-            Helping businesses grow online
+        <div className="inline-flex items-center justify-center gap-2 border border-gray-300 px-4 py-1.5 rounded-full">
+            <p className="text-xs font-medium text-center">
+                Helping businesses grow online
             </p>
         </div>
 
