@@ -6,6 +6,13 @@ import assets from "../../assets/assets";
 const Navbar = ({ theme, setTheme }) => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
+    const navLinks = [
+        { name: "Home", href: "#hero" },
+        { name: "Services", href: "#services" },
+        { name: "Our Work", href: "#our-work" },
+        { name: "Contact", href: "#contact-us" },
+    ];
+
     const sidebarVariants = {
         hidden: { x: "100%", opacity: 0 },
         visible: {
@@ -91,14 +98,14 @@ const Navbar = ({ theme, setTheme }) => {
 
                             {/* Sidebar Links */}
                             <ul className="flex flex-col gap-6 text-lg font-semibold w-full relative z-10">
-                                {["Home", "Services", "Our Work", "Contact"].map((item, i) => (
+                                {navLinks.map((item, i) => (
                                     <li key={i}>
                                         <a
-                                            href={`#${item.toLowerCase().replace(" ", "-")}`}
+                                            href={item.href}
                                             onClick={() => setSidebarOpen(false)}
                                             className="block py-2 px-2 rounded-lg text-gray-900 dark:text-gray-100 hover:text-secondary hover:bg-secondary/10 transition-all"
                                         >
-                                            {item}
+                                            {item.name}
                                         </a>
                                     </li>
                                 ))}
