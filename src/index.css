@@ -1,0 +1,56 @@
+/* stylelint-disable at-rule-no-unknown */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@plugin "daisyui";
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    cursor: none;
+}
+
+@theme {
+    --color-primary: #5044E5;
+}
+
+@keyframes cursorGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px var(--cursor-color);
+    }
+
+    50% {
+        box-shadow: 0 0 25px var(--cursor-color);
+    }
+}
+
+/* Swiper Pagination Styling */
+/* Move pagination BELOW swiper content */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 24px;
+  bottom: auto !important;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #999;
+  opacity: 0.6;
+  margin: 0 4px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  width: 14px;
+  height: 14px;
+  background: #5044E5;
+  opacity: 1;
+  transform: scale(1.2);
+}
